@@ -55,7 +55,7 @@ running tests.
 The structure of this lab — where its files and folders are located — looks
 roughly like the following:
 
-```
+```text
 ├── CONTRIBUTING.md
 ├── LICENSE.md
 ├── README.md
@@ -157,7 +157,7 @@ _Expect first_number to be an integer or be a float_.
 If we run `learn` this test appears first, along with the string descriptions
 we saw in `describe` and `it`:
 
-```
+```text
 ./calculator.rb
   contains a local variable called first_number that is assigned to a number (FAILED - 1)
 
@@ -183,7 +183,7 @@ What if we were to create a variable called `first_number` inside
 instance, we wrote `first_number = "Hello world!"` in `calculator.rb`. Running
 `learn` again, we would see this:
 
-```
+```text
 ./calculator.rb
   contains a local variable called first_number that is assigned to a number (FAILED - 1)
 
