@@ -1,8 +1,8 @@
-# Test Driven Development with Rspec
+# Test Driven Development with RSpec
 
 ## Learning Goals
 
-- Explore the Rspec testing environment
+- Explore the RSpec testing environment
 - Read and interpret tests
 - Practice declaring and using variables
 
@@ -46,7 +46,7 @@ We use tests to describe the program's behavior, just as you would in a
 professional coding environment, and we also use them as teaching tools. You are
 in charge of getting the tests to pass.
 
-In Ruby, tests are handled by a tool called [Rspec][rspec]. Rspec is written in Ruby, but as
+In Ruby, tests are handled by a tool called [RSpec][rspec]. RSpec is written in Ruby, but as
 we will see, has some custom functionality built in specifically for writing and
 running tests.
 
@@ -95,16 +95,16 @@ describe "./calculator.rb" do
 end
 ```
 
-`describe` is a method provided by our test library, Rspec. We'll go into depth
+`describe` is a method provided by our test library, RSpec. We'll go into depth
 on methods soon, but briefly: methods let us group up a set of statements into a
 sort of bundle. Whenever that bundle's name is called, all the statements inside
 are called in order. This is incredibly useful when we need to run the same
 statements over and over (as we do running and rerunning tests).
 
 The `describe` method holds our tests. Just after `describe` is a string,
-`"./calculator.rb"`. Here, Rspec is telling us that the tests that come
+`"./calculator.rb"`. Here, RSpec is telling us that the tests that come
 afterwords will be about the file `calculator.rb`. We see the first one inside
-another Rspec method, `it`:
+another RSpec method, `it`:
 
 ```ruby
 it "contains a local variable called first_number that is assigned to a number" do
@@ -144,12 +144,12 @@ This is the _actual_ test that will produce a passing or failing response when
 we run `learn`. Read outloud, this line sounds like a normal English sentence:
 _Expect first_number to be an integer or be a float_.
 
-- `expect` is another Rspec method, indicating a test statement
+- `expect` is another RSpec method, indicating a test statement
 - `first_number` is the variable defined two lines prior. It is the subject of
   the test
 - `to` allows the test to define a positive expectation. Using `not_to` here
   would define a negative expectation
-- `be_an` / `be_a` are known as [Rspec matchers][matchers]. In this case, they
+- `be_an` / `be_a` are known as [RSpec matchers][matchers]. In this case, they
   are for setting up the expectation that something is a certain data type
 - `or` allows for two possible passing scenarios here: either `first_number` is
   an integer, or `first_number` is a float
@@ -268,7 +268,7 @@ being able to read tests is a skill that will be immediately helpful to you.
 ## Resources
 
 [Test Driven Development][tdd]
-[Rspec][rspec]
+[RSpec][rspec]
 
 [tdd]: https://en.wikipedia.org/wiki/Test-driven_development
 [rspec]: http://rspec.info/
