@@ -8,12 +8,13 @@
 
 ## Introduction
 
-We've covered a lot of the basics of Ruby, but before we go further, we must talk a bit more about _testing_. As part of this course, you
-will encounter many lessons with tests that must be passed to register the
-lesson as complete. These are referred to as _labs_. You've already completed a
-few of them! All labs follow a similar format:
+We've covered a lot of the basics of Ruby, but, before we go further, we must
+talk more about _testing_. As part of this course, you will encounter many
+lessons with tests that must be passed to register the lesson as complete. These
+are referred to as _labs_. You've already completed a few of them! In all labs,
+you follow a similar process:
 
-- Work in the provided files, testing out potential solutions. In this lab, for
+- Work in the provided files, testing out potential solutions: In this lab, for
   instance, code will need to be written in `calculator.rb` to pass the tests
 - Run `learn` to print the tests at any point while you're writing your code
 - Read the error messages produced by running the tests
@@ -42,16 +43,16 @@ we think they do. Tests help us identify bugs and judge how healthy our
 applications are.
 
 We use tests to describe the program's behavior, just as you would in a
-professional coding environment, and we also use them as teaching tools. You are
-in charge of getting the tests to pass.
+professional coding environment. We also use them as teaching tools. You are in
+charge of getting the tests to pass.
 
-In Ruby, tests are handled by a tool called [RSpec][rspec]. RSpec is written in Ruby, but as
-we will see, has some custom functionality built in specifically for writing and
-running tests.
+In Ruby, tests are handled by a tool called [RSpec][rspec]. RSpec is written in
+Ruby, but as we will see, has some custom functionality built in specifically
+for writing and running tests.
 
 ### Directory Structure
 
-The structure of this lab — where its files and folders are located — looks
+The structure of this lab—where its files and folders are located—looks
 roughly like the following:
 
 ```text
@@ -64,9 +65,9 @@ roughly like the following:
     └── spec_helper.rb
 ```
 
-All labs will more or less have the same structure. (And non-lab lessons, for
-that matter, will still have CONTRIBUTING.md, LICENSE.md, and README.md files.)
-In Ruby, all labs will have a `spec` folder that contains our tests.
+All labs will more or less have the same structure. (Non-lab lessons will still
+have CONTRIBUTING.md, LICENSE.md, and README.md files.) In Ruby, all labs will
+have a `spec` folder that contains our tests.
 
 ## Code Along
 
@@ -128,8 +129,8 @@ end
 
 Reading the first line, we see a variable, `first_number` being assigned to
 something, `get_variable_from_file`. This is actually another method! For now,
-we don't need to know what this method is doing (although we could
-probably guess by its name). All we need to know is that the _result_ of
+we don't need to know what this method is doing (although, given its name, we
+could probably guess). All we need to know is that the _result_ of
 `get_variable_from_file('./calculator.rb', "first_number")` is getting assigned
 to `first_number`.
 
@@ -250,12 +251,12 @@ Once you have all tests passing, run `learn submit` to submit your solution.
 
 ## Conclusion
 
-Labs are a major part of this course, and all labs rely on tests that you must
+Labs are a major part of this course and all labs rely on tests that you must
 pass to register the completion of the lesson. Being able to read and interpret
 tests will help you unravel complex challenges ahead. More than that, though,
-testing is a powerful tool to become familiar with.
+testing is a powerful tool you can use in your future development work.
 
-[Test driven development][tdd] is a common process for developing programs in
+[Test-driven development][tdd] is a common process for developing programs in
 which tests are written before code. A feature is first designed. Those designs
 are then set up as test expectations. Once the tests are created, the actual code
 is written to pass those tests.
