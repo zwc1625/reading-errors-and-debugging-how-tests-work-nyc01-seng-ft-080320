@@ -1,4 +1,4 @@
-# Test Driven Development with RSpec
+# Test-Driven Development with RSpec
 
 ## Learning Goals
 
@@ -8,13 +8,13 @@
 
 ## Introduction
 
-We've covered a lot of the basics of Ruby, but before we go further, its
-important that we talk a bit more about _testing_. As part of this course, you
-will encounter many lessons with tests that must be passed to register the
-lesson as complete. These are referred to as _labs_. You've already completed a
-few of them! All labs follow a similar format:
+We've covered a lot of the basics of Ruby, but, before we go further, we must
+talk more about _testing_. As part of this course, you will encounter many
+lessons with tests that must be passed to register the lesson as complete. These
+are referred to as _labs_. You've already completed a few of them! In all labs,
+you follow a similar process:
 
-- Work in the provided files, testing out potential solutions. In this lab, for
+- Work in the provided files, testing out potential solutions: in this lab, for
   instance, code will need to be written in `calculator.rb` to pass the tests
 - Run `learn` to print the tests at any point while you're writing your code
 - Read the error messages produced by running the tests
@@ -32,10 +32,10 @@ tests while also getting a little more practice with variables.
 
 Your task in this lab is to build a simple calculator. Using variables, this
 calculator will be able to take any two numbers and produce the result of their
-addition, subtraction, multiplication and division. The exact specifications we
+addition, subtraction, multiplication, and division. The exact specifications we
 need to create this calculator are available to us... _in the tests_.
 
-## Test Driven Behaviors
+## Test-Driven Behaviors
 
 When we want to run an experiment, we need to develop a hypothesis and we need
 to test it. In programming, we run tests to verify that programs behave the way
@@ -43,16 +43,16 @@ we think they do. Tests help us identify bugs and judge how healthy our
 applications are.
 
 We use tests to describe the program's behavior, just as you would in a
-professional coding environment, and we also use them as teaching tools. You are
-in charge of getting the tests to pass.
+professional coding environment. We also use them as teaching tools. You are in
+charge of getting the tests to pass.
 
-In Ruby, tests are handled by a tool called [RSpec][rspec]. RSpec is written in Ruby, but as
-we will see, has some custom functionality built in specifically for writing and
-running tests.
+In Ruby, tests are handled by a tool called [RSpec][rspec]. RSpec is written in
+Ruby, but as we will see, has some custom functionality built in specifically
+for writing and running tests.
 
 ### Directory Structure
 
-The structure of this lab — where its files and folders are located — looks
+The structure of this lab—where its files and folders are located—looks
 roughly like the following:
 
 ```text
@@ -65,14 +65,14 @@ roughly like the following:
     └── spec_helper.rb
 ```
 
-All labs will more or less have the same structure. (And non-lab lessons, for
-that matter, will still have CONTRIBUTING.md, LICENSE.md, and README.md files.)
-In Ruby, all labs will have a `spec` folder that contains our tests.
+All labs will more or less have the same structure. (non-lab lessons will still
+have CONTRIBUTING.md, LICENSE.md, and README.md files.) In Ruby, all labs will
+have a `spec` folder that contains our tests.
 
 ## Code Along
 
 Open up `calculator.rb` in your text editor. If you're using the Learn IDE,
-click the blue "Open IDE" button in the top right hand corner of the lesson. If
+click the blue "Open IDE" button in the top right-hand corner of the lesson. If
 you open up that
 `intro-to-ruby-programming-basics-test-driven-development-with-rspec/`
 directory, you'll see a list of files (along with a `spec/` directory). Click
@@ -103,7 +103,7 @@ statements over and over (as we do running and rerunning tests).
 
 The `describe` method holds our tests. Just after `describe` is a string,
 `"./calculator.rb"`. Here, RSpec is telling us that the tests that come
-afterwords will be about the file `calculator.rb`. We see the first one inside
+afterward will be about the file `calculator.rb`. We see the first one inside
 another RSpec method, `it`:
 
 ```ruby
@@ -129,8 +129,8 @@ end
 
 Reading the first line, we see a variable, `first_number` being assigned to
 something, `get_variable_from_file`. This is actually another method! For now,
-we don't really need to know what this method is doing (although we could
-probably guess by its name). All we need to know is that the _result_ of
+we don't need to know what this method is doing (although, given its name, we
+could probably guess). All we need to know is that the _result_ of
 `get_variable_from_file('./calculator.rb', "first_number")` is getting assigned
 to `first_number`.
 
@@ -141,7 +141,7 @@ expect(first_number).to be_an(Integer).or be_a(Float)
 ```
 
 This is the _actual_ test that will produce a passing or failing response when
-we run `learn`. Read outloud, this line sounds like a normal English sentence:
+we run `learn`. Read out loud, this line sounds like a normal English sentence:
 _Expect first_number to be an integer or be a float_.
 
 - `expect` is another RSpec method, indicating a test statement
@@ -152,7 +152,7 @@ _Expect first_number to be an integer or be a float_.
 - `be_an` / `be_a` are known as [RSpec matchers][matchers]. In this case, they
   are for setting up the expectation that something is a certain data type
 - `or` allows for two possible passing scenarios here: either `first_number` is
-  an integer, or `first_number` is a float
+  an integer or `first_number` is a float.
 
 If we run `learn` this test appears first, along with the string descriptions
 we saw in `describe` and `it`:
@@ -207,8 +207,8 @@ either, so the test fails.
 
 That's a lot to take in. Don't worry too much yet if it's hard to understand
 what is happening inside of the `spec/calculator_spec.rb` file. But it's a good
-idea to open up the file, and gather the information that you can, especially
-when you are stuck on a lab. Reading test files and their results can give
+idea to open up the file and gather the information that you can, especially
+when you are stuck in a lab. Reading test files and their results can give
 targeted insight into what is breaking and where when you're writing a solution.
 
 We will also provide instructions in the `README.md` file that will allow you to
@@ -236,8 +236,7 @@ expect(second_number).not_to equal(0)
 ```
 
 - The third test is looking for a local variable named `sum`. The `sum` variable
-  is the result of adding `first_number` and `second_number` together. This test
-  is using all three variables. Not only that, the test is using whatever values
+  is the result of adding `first_number` and `second_number` together. This test is using all three variables. Not only that, the test is using whatever values
   _you_ assigned to `first_number` and `second_number`.
 
 - The fourth, fifth and sixth tests are similar to the tests for `sum`. Create
@@ -252,14 +251,14 @@ Once you have all tests passing, run `learn submit` to submit your solution.
 
 ## Conclusion
 
-Labs are a major part of this course, and all labs rely on tests that you must
-pass to register completion of the lesson. Being able to read and interpret
+Labs are a major part of this course and all labs rely on tests that you must
+pass to register the completion of the lesson. Being able to read and interpret
 tests will help you unravel complex challenges ahead. More than that, though,
-testing is a powerful tool to become familiar with.
+testing is a powerful tool you can use in your future development work.
 
-[Test driven development][tdd] is a common process for developing programs in
+[Test-driven development][tdd] is a common process for developing programs in
 which tests are written before code. A feature is first designed. Those designs
-are then setup as test expectations. Once the tests are created, the actual code
+are then set up as test expectations. Once the tests are created, the actual code
 is written to pass those tests.
 
 Writing our own tests is still a bit further down the path of learning Ruby, but
@@ -273,5 +272,3 @@ being able to read tests is a skill that will be immediately helpful to you.
 [tdd]: https://en.wikipedia.org/wiki/Test-driven_development
 [rspec]: http://rspec.info/
 [matchers]: https://relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-
-
