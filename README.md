@@ -14,7 +14,7 @@ lessons with tests that must be passed to register the lesson as complete. These
 are referred to as _labs_. You've already completed a few of them! In all labs,
 you follow a similar process:
 
-- Work in the provided files, testing out potential solutions: In this lab, for
+- Work in the provided files, testing out potential solutions: in this lab, for
   instance, code will need to be written in `calculator.rb` to pass the tests
 - Run `learn` to print the tests at any point while you're writing your code
 - Read the error messages produced by running the tests
@@ -65,7 +65,7 @@ roughly like the following:
     └── spec_helper.rb
 ```
 
-All labs will more or less have the same structure. (Non-lab lessons will still
+All labs will more or less have the same structure. (non-lab lessons will still
 have CONTRIBUTING.md, LICENSE.md, and README.md files.) In Ruby, all labs will
 have a `spec` folder that contains our tests.
 
