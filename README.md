@@ -26,7 +26,7 @@ you follow a similar process:
 As the lesson material becomes more complex, so do the tests. Getting
 acquainted with reading and interpreting tests will help you overcome some of
 the toughest labs ahead. In this lesson, we're going to walk through reading
-tests while also getting a little more practice with variables.
+tests in detail while also getting a little more practice with variables.
 
 ## Building a Simple Calculator
 
@@ -74,7 +74,7 @@ have a `spec` folder that contains our tests.
 Open up `calculator.rb` in your text editor. If you're using the Learn IDE,
 click the blue "Open IDE" button in the top right-hand corner of the lesson. If
 you open up that
-`intro-to-ruby-programming-basics-test-driven-development-with-rspec/`
+`programming-univbasics-3-labs-with-tdd/`
 directory, you'll see a list of files (along with a `spec/` directory). Click
 `calculator.rb`, and it will open in the editor.
 
@@ -95,11 +95,11 @@ describe "./calculator.rb" do
 end
 ```
 
-`describe` is a method provided by our test library, RSpec. We'll go into depth
-on methods soon, but briefly: methods let us group up a set of statements into a
-sort of bundle. Whenever that bundle's name is called, all the statements inside
-are called in order. This is incredibly useful when we need to run the same
-statements over and over (as we do running and rerunning tests).
+`describe` is a method provided by our test library, RSpec. Remember, methods
+let us group up a set of statements into a sort of bundle. Whenever that
+bundle's name is called, all the statements inside are called in order. This is
+incredibly useful when we need to run the same statements over and over (as we
+do running and rerunning tests).
 
 The `describe` method holds our tests. Just after `describe` is a string,
 `"./calculator.rb"`. Here, RSpec is telling us that the tests that come
@@ -218,11 +218,11 @@ the better equipped you will be as we progress to more and more complex topics.
 ### Solving the Tests for this Lab
 
 Now that you've got a sense of the tests in this lab, it is time to solve them
-all. There are six in total. In this lab, testing is configured so that you will
-only see the first test that fails along with any passing tests before that.
-This means, as you pass each test, you'll see a growing list of passing tests
-until you've passed them all. Run `learn` as you work through each step below
-to see the test results.
+all. There are six tests in total. In this lab, testing is configured with
+`--fail-fast`, so you will only see the first test that fails along with any
+passing tests before that. This means, as you pass each test, you'll see a
+growing list of passing tests until you've passed them all. Run `learn` as you
+work through each step below to see the test results.
 
 - The first test we've started to solve already. The test is looking for a
   variable in `calculator.rb`, `first_number`. This variable should be set to
@@ -243,11 +243,15 @@ expect(second_number).not_to equal(0)
   the variable `difference` for subtracting, `product` for multiplying, and
   `quotient` for dividing the `first_number` and `second_number` variables.
 
-**Hint:** If you're stuck on a particular variable, try writing the variable
-in `calculator.rb` and assigning it a value you _know_ is incorrect. Tests may
-produce different bits of useful information based on what you've written.
+> **Hint:** If you're stuck on a particular variable, try writing the variable
+> in `calculator.rb` and assigning it a value you _know_ is incorrect. Tests may
+> produce different bits of useful information based on what you've written.
 
 Once you have all tests passing, run `learn submit` to submit your solution.
+
+> **Note:** Many labs in this course will show all the tests, both passing and
+> failing by default. You can use `--fail-fast` to change this behavior on any
+> lab. Just type `learn --fail-fast` when running the tests.
 
 ## Conclusion
 
