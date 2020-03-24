@@ -33,7 +33,7 @@ Our task in this lab is to build a simple calculator. You might be thinking you
 just did this. You are correct, and this calculator is even simpler than the
 last. The goal here, though, isn't to teach you a new concept you need to
 practice writing. The goal in this lab is to get better at reading, and since
-we've already tackled a similar problem, we can focus on the tests.
+we've already tackled a similar problem, we can focus on reading the tests.
 
 In Ruby, tests are typically handled by a tool called [RSpec][rspec]. RSpec is
 written in Ruby, but as we will see, has some custom functionality built in
